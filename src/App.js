@@ -9,9 +9,9 @@ class App extends Component {
 
   state={
     txnList:[
-    {description:'abc', amount:12.03, expense:true},
-    {description:'xyz', amount:12.03, expense:false},
-    {description:'asdasd', amount:12.03, expense:false}
+    {description:'Apartment repairs', amount:12.03, expense:true},
+    {description:'Salary', amount:12.03, expense:false},
+    {description:'Alphabet stocks profit', amount:12.03, expense:false}
     ],
     income : 24.06,
     exp : 12.03
@@ -20,10 +20,6 @@ class App extends Component {
   
 
   clickHandler = (desc,amt,type)=>{
-    // let desc = document.querySelector("input[type=text]");
-    // let amt = Number(document.querySelector("input[type=number]").value);
-    // let type = document.querySelector("select").selectedOptions[0].value;
-    console.log(type);
     let newTxn ={description:desc.value, amount: amt, expense : (type === 'income' ? false : true) };
     const newtxnlist = [...this.state.txnList];
     newtxnlist.push(newTxn);
