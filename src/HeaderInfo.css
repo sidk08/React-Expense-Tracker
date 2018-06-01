@@ -1,0 +1,13 @@
+.HeaderInfo{
+    background-color: cadetblue;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.HeaderInfo div{
+    text-align: center;
+    font-size: 1.5rem;
+    color: azure;
+    font-weight: bold;
+}

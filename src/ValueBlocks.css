@@ -1,0 +1,11 @@
+.ValueBlock{
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: azure;
+    display: inline-block;
+    border : 1px solid white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0px 30px;
+}

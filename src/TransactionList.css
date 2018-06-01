@@ -1,0 +1,24 @@
+.txnList{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    background-color: silver;
+    padding: 20px;
+}
+
+.txnList ul{
+    padding: unset;
+}
+
+.header{
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    border :none;
+    box-shadow: 9px;
+    background-color: snow;
+}
+
+.header span{
+    margin: 10px auto;
+}
