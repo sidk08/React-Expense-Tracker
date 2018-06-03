@@ -19,6 +19,8 @@ button{
     border: none;
     background-color: rgba(0, 128, 128,0.7);
     box-shadow: 4px 4px gray;
+    color: azure;
+    cursor: pointer;
 }
 
 button:hover{

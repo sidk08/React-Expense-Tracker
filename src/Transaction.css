@@ -1,27 +1,20 @@
 .txn{
-    margin: 20px auto;
-    width: 80%;
-    height: 40px;
-    padding: 2px;
+    margin: 5px auto;
+    width: 90%;
+    height: 60px;
     border :none;
     box-shadow: 9px;
     background-color: snow;
-    /* margin-bottom: 20px;
-    margin-top: 20px; */
-    border-radius: 10px;
     font-size: 20px;
-    font-weight: bold;
 }
 
 .descbox{
-    position: relative;
     width: 50%;
     display: inline-block;
     text-align: center;
 }
 
 .box{
-    position: relative;
     width: 20%;
     display: inline-block;
 }
@@ -35,6 +28,19 @@
     padding-right: 5px;
 }
 
+.txn span{
+    margin-top: 15px;
+}
 
+img{
+    height: 20px;
+    margin-left: 20px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+img:hover{
+    opacity: 1;
+}
 
 

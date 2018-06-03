@@ -1,9 +1,10 @@
 .txnList{
-    width: 80%;
-    height: 300px;
+    width: 83%;
+    height: 400px;
     margin: auto;
     background-color: silver;
-    padding: 20px;
+    /* padding: auto; */
+    overflow: scroll;
 }
 
 .txnList ul{
@@ -16,7 +17,8 @@
     height: 40px;
     border :none;
     box-shadow: 9px;
-    background-color: snow;
+    background-color: rgba(255, 250, 250,0.8);
+
 }
 
 .header span{

@@ -5,7 +5,7 @@ const inputComp = (props) => {
     const clicked = ()=>{
         let desc = document.querySelector("input[type=text]");
         let amt = Number(document.querySelector("input[type=number]").value);
-        // amt = amt < 0 ? amt*-1:amt;
+        amt = amt < 0 ? amt*-1:amt;
         const type = document.querySelector("select").selectedOptions[0].value;
 
         if(desc.value.trim() === ""){
@@ -18,20 +18,20 @@ const inputComp = (props) => {
         }
         props.clickHandler(desc,amt,type)
         desc.value="";
-        document.querySelector("input[type=number]").value= "0.0";
+        document.querySelector("input[type=number]").value= "";
     }
 
 
 
     return(
         <div className="InputCompo">
-         <input type="text" placeholder="Enter description"/>
+         <input type="text"defaultValue="" placeholder="    Enter description"/>
           &emsp;
-          <input type="number" placeholder="Enter amount"  value= "0.0" min="0.0" step="0.01" oninput="validity.valid||(value='');"/>
+          <input type="number" defaultValue="" placeholder="    Enter amount"  min="0.0" step="0.01"/>
           &emsp;
-          <select>
-            <option value="expense">Expense</option>
+          <select defaultValue="expense">
             <option value="income">Income</option>
+            <option value="expense">Expense</option>
           </select>
           &emsp;
           <button onClick={()=>{clicked()}}>Add expense</button>

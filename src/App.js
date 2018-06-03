@@ -31,32 +31,33 @@ class App extends Component {
     const newexp = (type === 'expense' ? existexp + amt : existexp);
 
     this.setState({txnList:newtxnlist, income:newincome, exp:newexp});
+
+    // this.deleteTxn(1);
+  }
+
+  deleteTxn =(idx)=>{
+    const txnlist=this.state.txnList;
+
+    let amt = txnlist[idx].amount;
+    let newincome=this.state.income;
+    let newexp=this.state.exp;
+    let txntype = txnlist[idx].expense;
+
+    txntype === false ? newincome = newincome-amt:newexp=newexp-amt;
+
+    txnlist.splice(idx,1);
+
+    this.setState({txnList:txnlist, income:newincome,exp:newexp});
+
   }
 
 
   render() {
-
-    // let transaction=(
-    //   this.state.txnList.map((txn,idx)=>{
-    //     return(
-    //       <li key={idx}>Description : {txn.description} Amount:{txn.amount} {txn.expense === true ? <span>Expense</span> : <span>Income</span>}</li>
-    //     );
-    //   })
-    // );
-
     return (
       <div className="App">
         <HeaderInfo income={this.state.income} exp={this.state.exp}/>
-        <InputCompo clickHandler={this.clickHandler}/>
-        <TransactionList txnlist={this.state.txnList}/>
-        {/* /* <ul>
-          {transaction}
-        </ul>
-        
-         <strong>Balance : {this.state.income - this.state.exp}</strong>
-        <br/>
-        <strong>Total Income :{this.state.income}</strong>&emsp;<strong>Total Expense :{this.state.exp}</strong>
-        <br/> */}
+        <InputCompo clickHandler={this.clickHandler} />
+        <TransactionList txnlist={this.state.txnList} delHandler={this.deleteTxn}/>
       </div>
     );
   }

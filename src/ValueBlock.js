@@ -3,8 +3,7 @@ import './ValueBlocks.css'
 
 const valueBlock = (props) =>(
     <div className="ValueBlock">
-        ${props.value}
-        <br/>
+        <p>${props.value}</p>
         <p>{props.label}</p>
     </div>
 )
