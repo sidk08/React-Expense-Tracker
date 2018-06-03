@@ -3,4 +3,3 @@
 #### Keeps a record of added transations and shows a list of the same.
 
 ## App sceenshot
-![screenshot](https://github.com/sidk08/React-Expense-Tracker/blob/master/screenshot.JPG "Screenshot")
